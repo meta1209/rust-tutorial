@@ -89,7 +89,7 @@ impl ComputeArea for Geometry
 }
 
 
-fn get_area(geometry: Geometry)
+fn get_area<T: ComputeArea>(geometry: T)
 {
     let current_geo_area = geometry.area();
     println!("{}", current_geo_area)
